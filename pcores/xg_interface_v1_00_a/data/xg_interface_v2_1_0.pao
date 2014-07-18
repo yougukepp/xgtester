@@ -1,0 +1,23 @@
+##############################################################################
+## Filename:          E:\workspace\hyPlatform\pcores/xg_interface_v1_00_a/data/xg_interface_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Sat Dec 07 18:04:35 2013 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib xg_interface_v1_00_a chanbond_monitor verilog
+lib xg_interface_v1_00_a gtx_wrapper verilog
+lib xg_interface_v1_00_a gtx_wrapper_gtx verilog
+lib xg_interface_v1_00_a nf10_axis_converter_rx verilog
+lib xg_interface_v1_00_a nf10_axis_converter_tx verilog
+lib xg_interface_v1_00_a rx_queue verilog
+lib xg_interface_v1_00_a small_async_fifo verilog
+lib xg_interface_v1_00_a tx_queue verilog
+lib xg_interface_v1_00_a tx_sync verilog
+lib xg_interface_v1_00_a xaui_block verilog
+lib xg_interface_v1_00_a xaui_ngc verilog
+lib xg_interface_v1_00_a xaui_top verilog
+lib xg_interface_v1_00_a xg_interface verilog
+lib xg_interface_v1_00_a xgmac_ngc verilog
+lib xg_interface_v1_00_a xgmac_top verilog
+lib xg_interface_v1_00_a fallthrough_small_fifo_v2 verilog
+lib xg_interface_v1_00_a small_fifo_v3 verilog

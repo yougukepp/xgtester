@@ -1,0 +1,19 @@
+CONFIG PART = xc6vlx240tff1156-1;
+
+NET "refclk156_p" LOC = AD6;
+NET "refclk156_n" LOC = AD5;
+NET "refclk156_n" TNM_NET = refclk156_n;
+TIMESPEC TS_refclk_n0 = PERIOD "refclk156_n" 156.25 MHz HIGH 50%;
+NET "refclk156_p" TNM_NET = refclk156_p;
+TIMESPEC TS_refclk_p0 = PERIOD "refclk156_p" 156.25 MHz HIGH 50%;
+
+NET "resetn" LOC = "H10";
+
+NET "sys_clk_p" LOC = J9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+NET "sys_clk_n" LOC = H9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+
+INST xg_interface/xaui/xaui_block/gtx_wrapper_i/gtx0_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y4;
+INST xg_interface/xaui/xaui_block/gtx_wrapper_i/gtx1_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y5;
+INST xg_interface/xaui/xaui_block/gtx_wrapper_i/gtx2_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y6;
+INST xg_interface/xaui/xaui_block/gtx_wrapper_i/gtx3_gtx_wrapper_i/gtxe1_i LOC=GTXE1_X0Y7;
+

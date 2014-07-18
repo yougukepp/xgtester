@@ -1,0 +1,43 @@
+
+CONFIG PART = xc6vlx240tff1156-1;
+
+NET CLK_N LOC = "H9"  |  DIFF_TERM = "TRUE"  |  IOSTANDARD = "LVDS_25";
+NET CLK_P LOC = "J9"  |  DIFF_TERM = "TRUE"  |  IOSTANDARD = "LVDS_25";
+NET "CLK" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 200000 kHz;
+
+NET LEDs_8Bits_TRI_O[0] LOC = "AC22"  |  IOSTANDARD = "LVCMOS25";
+NET LEDs_8Bits_TRI_O[1] LOC = "AC24"  |  IOSTANDARD = "LVCMOS25";
+NET LEDs_8Bits_TRI_O[2] LOC = "AE22"  |  IOSTANDARD = "LVCMOS25";
+NET LEDs_8Bits_TRI_O[3] LOC = "AE23"  |  IOSTANDARD = "LVCMOS25";
+NET LEDs_8Bits_TRI_O[4] LOC = "AB23"  |  IOSTANDARD = "LVCMOS25";
+NET LEDs_8Bits_TRI_O[5] LOC = "AG23"  |  IOSTANDARD = "LVCMOS25";
+NET LEDs_8Bits_TRI_O[6] LOC = "AE24"  |  IOSTANDARD = "LVCMOS25";
+NET LEDs_8Bits_TRI_O[7] LOC = "AD24"  |  IOSTANDARD = "LVCMOS25";
+NET Push_Buttons_5Bits_TRI_I[0] LOC = "G26"  |  IOSTANDARD = "LVCMOS15";
+NET Push_Buttons_5Bits_TRI_I[1] LOC = "A19"  |  IOSTANDARD = "LVCMOS15";
+NET Push_Buttons_5Bits_TRI_I[2] LOC = "G17"  |  IOSTANDARD = "LVCMOS15";
+NET Push_Buttons_5Bits_TRI_I[3] LOC = "A18"  |  IOSTANDARD = "LVCMOS15";
+NET Push_Buttons_5Bits_TRI_I[4] LOC = "H17"  |  IOSTANDARD = "LVCMOS15";
+NET RESET LOC = "H10"  |  IOSTANDARD = "SSTL15"  |  TIG;
+NET RS232_Uart_1_sin LOC = "J24"  |  IOSTANDARD = "LVCMOS25";
+NET RS232_Uart_1_sout LOC = "J25"  |  IOSTANDARD = "LVCMOS25";
+
+#### Below IS 10G interface ####
+##### MDIO #####
+NET nf10_mdio_0_PHY_MDC_pin LOC=AF20;
+NET nf10_mdio_0_PHY_MDIO_pin LOC=AF21;
+
+##### CLK_156 ####
+NET "xg_interface_0_refclk156_n_pin" TNM_NET = TS_nf10_10g_interface_0_refclk156_n_pin;
+TIMESPEC TS_nf10_10g_interface_0_refclk156_n_pin = PERIOD "xg_interface_0_refclk156_n_pin" 156.25 MHz HIGH 50%;
+NET "xg_interface_0_refclk156_p_pin" TNM_NET = TS_nf10_10g_interface_0_refclk156_p_pin;
+TIMESPEC TS_nf10_10g_interface_0_refclk156_p_pin = PERIOD "xg_interface_0_refclk156_p_pin" 156.25 MHz HIGH 50%;
+NET xg_interface_0_refclk156_n_pin LOC=AD5;
+NET xg_interface_0_refclk156_p_pin LOC=AD6;
+
+INST "xg_interface_0/xg_interface_0/xaui/xaui_block/gtx_wrapper_i/gtx0_gtx_wrapper_i/gtxe1_i" LOC=GTXE1_X0Y7;
+INST "xg_interface_0/xg_interface_0/xaui/xaui_block/gtx_wrapper_i/gtx1_gtx_wrapper_i/gtxe1_i" LOC=GTXE1_X0Y6;
+INST "xg_interface_0/xg_interface_0/xaui/xaui_block/gtx_wrapper_i/gtx2_gtx_wrapper_i/gtxe1_i" LOC=GTXE1_X0Y5;
+INST "xg_interface_0/xg_interface_0/xaui/xaui_block/gtx_wrapper_i/gtx3_gtx_wrapper_i/gtxe1_i" LOC=GTXE1_X0Y4;
+

@@ -1,0 +1,7 @@
+##############################################################################
+## Filename:          E:\workspace\xgTester\pcores/top_v1_00_a/data/top_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Tue Nov 26 19:56:57 2013 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib top_v1_00_a top verilog

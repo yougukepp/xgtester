@@ -1,0 +1,9 @@
+##############################################################################
+## Filename:          E:\workspace\hyPlatform\pcores/xg_interface_v1_00_a/data/xg_interface_v2_1_0.bbd
+## Description:       Black Box Definition
+## Date:              Sat Dec 07 18:04:35 2013 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+Files
+################################################################################
+xaui.ngc,xgmac.ngc

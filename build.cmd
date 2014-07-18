@@ -1,0 +1,1 @@
+cp data/*.cmd ./ & platform.cmd & bit.cmd & soft.cmd

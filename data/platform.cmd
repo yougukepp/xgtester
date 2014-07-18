@@ -1,0 +1,2 @@
+platgen -p xc6vlx240tff1156-1 -lang vhdl -intstyle default -msg platgen.log -parallel yes system.mhs
+cp etc/synthesis.cmd synthesis/ & cp etc/system_xst.scr synthesis/ & cd synthesis & synthesis.cmd & cd ..
